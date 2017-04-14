@@ -1,0 +1,21 @@
+{
+  "name": "nodesearch",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "DF",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.16.0",
+    "cheerio": "^0.22.0",
+    "express": "^4.14.0",
+    "mongodb": "^2.2.16",
+    "mongoose": "^4.7.5",
+    "mustache": "^2.3.0",
+    "mustache-express": "^1.2.4",
+    "request": "^2.79.0"
+  }
+}

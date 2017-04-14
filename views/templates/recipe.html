@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8">
+	<title>{{ title }}</title>
+	<link rel="stylesheet" href="/css/main.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link href="https://fonts.googleapis.com/css?family=Amatic+SC:400,700&amp;subset=latin-ext" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Kalam:300,400&amp;subset=latin-ext" rel="stylesheet">
+</head>
+
+<body>
+    <div class="background"></div>
+	<div class="recipe">
+		<div class="recipe__photo recipe__photo--desktop" style="background-image: url({{ image }})"></div>
+        <h1 class="recipe__title">{{ title }}</h1>
+		<h4 class="recipe__heading">Składniki:</h4>
+		<!-- <ul class="recipe__list recipe__list--ingredients"> -->
+			{{ #ingredients }}
+			<p class="recipe__ingredient">
+				{{ . }}
+			</p>
+			{{ /ingredients }}
+		<!-- </ul> -->
+		<h4 class="recipe__heading recipe__heading--directions">Przygotowanie:</h4>
+		<ol class="recipe__list recipe__list--directions">
+			{{ #directions }}
+			<li>
+				{{ . }}
+			</li>
+			{{ /directions }}
+		</ol>
+        <div class="recipe__photo recipe__photo--mobile" style="background-image: url({{ image }})"></div>
+	</div>
+    <a href="{{ url }}" target="_blank" class="recipe__pageOrigin">Przejdź do strony źródłowej</a>
+</body>
+
+</html>
